@@ -8,5 +8,5 @@ spec:
   type: ClusterIP
   ports:
    - port: {{ .Values.db.servicePort }}
-  selector: {{ include "AppCtx.frontSelectorLabels" . | nindent 4 }}
+  selector: {{ include "AppCtx.dbSelectorLabels" . | nindent 4 }}
 {{- end }}
